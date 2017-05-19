@@ -1,0 +1,16 @@
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\WpfApplication1.csproj.GenerateResource.Cache
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\Window1.g.cs
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\Window1.baml
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\App.baml
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\bin\Debug\SistemasContpaqi.exe.config
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\bin\Debug\SistemasContpaqi.exe
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\bin\Debug\SistemasContpaqi.pdb
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\SistemasContpaqi_MarkupCompile.cache
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\SistemasContpaqi_MarkupCompile.lref
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\SistemasContpaqi.g.resources
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\SistemasContpaqi.exe
+C:\Users\hectorva-c\Documents\personal\WpfApplication1\WpfApplication1\obj\Debug\SistemasContpaqi.pdb

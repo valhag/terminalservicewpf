@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="411.648" Width="701.988" WindowStyle="ToolWindow">
+
+    <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="0,12.929,-8,9.94" RenderTransformOrigin="0.555,0.49" Loaded="Grid_Loaded">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="69*"/>
+            <ColumnDefinition Width="280*"/>
+        </Grid.ColumnDefinitions>
+        <CheckBox x:Name="chkComercial" Content="Comercial" HorizontalAlignment="Left" Margin="0.856,61.496,0,0" VerticalAlignment="Top" Grid.Column="1" Height="15.96" Width="69.71"/>
+        <TextBox x:Name="TxtComercial" HorizontalAlignment="Left" Height="23" Margin="1.468,58.496,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Text="C:\Program Files (x86)\Compac\COMERCIAL\Comercial.exe" Grid.Column="2"/>
+        <Label x:Name="label" Content="Ruta exe" HorizontalAlignment="Left" Margin="2.322,19.738,0,0" VerticalAlignment="Top" Grid.Column="2" Height="25.96" Width="55.487"/>
+        <Label x:Name="label_Copy1" Content="Ruta exe" HorizontalAlignment="Left" Margin="0.856,19.738,0,0" VerticalAlignment="Top" Grid.Column="1" Height="25.96" Width="55.487"/>
+        <CheckBox x:Name="chkContabilidad" Content="Contabilidad&#xD;&#xA;" HorizontalAlignment="Left" Margin="0.856,87.336,0,0" VerticalAlignment="Top" Grid.Column="1" Height="31.92" Width="84.437"/>
+        <TextBox x:Name="TxtContabilidad" HorizontalAlignment="Left" Height="23" Margin="1.468,84.34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Grid.Column="2" Text="C:\Program Files (x86)\compac\Contabilidad\contabilidad_i.exe"/>
+        <CheckBox x:Name="chkFE" Content="Factura Electronica" HorizontalAlignment="Left" Margin="0.856,115.159,0,0" VerticalAlignment="Top" Grid.Column="1" Height="15.96" Width="132.504"/>
+        <TextBox x:Name="TxtFE" HorizontalAlignment="Left" Height="23" Margin="1.468,112.172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Text="C:\Program Files (x86)\Compacw\Facturacion\FacturacionI.exe" Grid.Column="2"/>
+        <Button x:Name="button" Content="Probar Configuracion&#xD;&#xA;" HorizontalAlignment="Left" Margin="110.157,308.031,0,0" VerticalAlignment="Top" Width="160.511" Click="button_Click_1" Grid.Column="1" Height="37.92" Grid.ColumnSpan="2">
+        </Button>
+        <Button x:Name="button1" Content="Generar" HorizontalAlignment="Left" Margin="206.917,308.031,0,0" VerticalAlignment="Top" Width="170.717" Click="button1_Click" RenderTransformOrigin="4.84,5.864" Height="37.92" Grid.Column="2"/>
+        <CheckBox x:Name="chkAdminpaq" Content="AdminPAQ" HorizontalAlignment="Left" Margin="0.856,143.004,0,0" VerticalAlignment="Top" Grid.Column="1" Height="15.96" Width="102.523"/>
+        <TextBox x:Name="TxtAdminpaq" HorizontalAlignment="Left" Height="23" Margin="1.468,140.004,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Text="C:\Program Files (x86)\Compacw\AdminPAQ\AdminPAQ.exe" Grid.Column="2"/>
+        <CheckBox x:Name="chkNominas" Content="Nominas&#xA;" HorizontalAlignment="Left" Margin="0.856,168.844,0,0" VerticalAlignment="Top" Grid.Column="1" Height="31.92" Width="84.437"/>
+        <TextBox x:Name="TxtNominas" HorizontalAlignment="Left" Height="23" Margin="1.468,165.848,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Grid.Column="2" Text="C:\Program Files (x86)\compac\Nominas\CONTPAQ_i_NOMINAS.exe"/>
+        <CheckBox x:Name="chkProduccion" Content="Produccion" HorizontalAlignment="Left" Margin="0.856,196.667,0,0" VerticalAlignment="Top" Grid.Column="1" Height="15.96" Width="132.504"/>
+        <TextBox x:Name="TxtProduccion" HorizontalAlignment="Left" Height="23" Margin="1.468,193.68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Text="C:\Program Files (x86)\Compac\PRODUCCION\CONTPAQ i_Producción.exe&#xD;&#xA;" Grid.Column="2"/>
+        <CheckBox x:Name="chkXMLEnlinea" Content="XML en linea+" HorizontalAlignment="Left" Margin="0.856,223.505,0,0" VerticalAlignment="Top" Grid.Column="1" Height="15.96" Width="132.504"/>
+        <TextBox x:Name="TxtXMLEnlinea" HorizontalAlignment="Left" Height="23" Margin="1.468,220.518,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Text="C:\Program Files (x86)\compac\XML en línea+\XMLenLinea.exe" Grid.Column="2"/>
+        <CheckBox x:Name="chkBancos" Content="Bancos" HorizontalAlignment="Left" Margin="0.856,250.343,0,0" VerticalAlignment="Top" Grid.Column="1" Height="15.96" Width="132.504"/>
+        <TextBox x:Name="TxtBancos" HorizontalAlignment="Left" Height="23" Margin="1.468,247.356,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="545.552" Text="C:\Program Files (x86)\compac\Bancos\bancos_i.exe" Grid.Column="2"/>
+    </Grid>
+
+</Window>
+
+

@@ -1,0 +1,168 @@
+﻿<Window x:Class="WpfApplication1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight" Height="410.041" Width="788.818" WindowStyle="ToolWindow">
+
+    <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" CornerRadius="5" BorderThickness="1.5" BorderBrush="Gray" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="MyButton1" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" CornerRadius="5" BorderThickness="1.5" BorderBrush="Gray" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Opacity" Value="0.8" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Opacity" Value="0.3" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
+       
+        <Style x:Key="MyButtonNominas" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\nominas.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyButtonContabilidad" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\conta.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyButtonComercial" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\comercial.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyButtonBancos" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\bancos.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyButtonXML" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\XML.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyButtonProduccion" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\produccion.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyButtonAdminpaq" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\adminpaq.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="MyButtonFE" BasedOn="{StaticResource MyButton1}" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <ImageBrush ImageSource="\images\FE.jpg"/>
+                        </Setter.Value>
+                    </Setter>
+
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Loaded="Grid_Loaded" Margin="0,10,11.066,0">
+
+
+
+        <Button x:Name="btnContabilidad" Content="" HorizontalAlignment="Left" Margin="247.991,10,0,0" VerticalAlignment="Top" Width="232.991" Height="92.633"  Click="btnContabilidad_Click" Style="{StaticResource MyButtonContabilidad}"></Button>
+        <Button x:Name="btnFE" Content="Factura&#xD;&#xA;Electronica" HorizontalAlignment="Left" Margin="489.876,10,0,0" VerticalAlignment="Top" Width="232.991" Click="btnFE_Click" Height="92.633" Style="{StaticResource MyButtonFE}"></Button>
+        <Button x:Name="btnComercial" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="232.991" Height="92.633" Click="btnComercial_Click" Style="{StaticResource MyButtonComercial}"></Button>
+        <Button x:Name="button" Content="Salir TS" HorizontalAlignment="Left" Margin="10,321.032,0,0" VerticalAlignment="Top" Width="712.867" Click="button_Click"/>
+        <Button x:Name="btnBancos" Content="" HorizontalAlignment="Left" Margin="247.991,109.63,0,0" VerticalAlignment="Top" Width="232.991" Height="92.633"  Click="btnBancos_Click" Style="{StaticResource MyButtonBancos}"></Button>
+        <Button x:Name="btnXML" Content="" HorizontalAlignment="Left" Margin="489.876,109.63,0,0" VerticalAlignment="Top" Width="232.991" Click="btnXML_Click" Height="92.633" Style="{StaticResource MyButtonXML}"></Button>
+        <Button x:Name="btnNominas" Content="" HorizontalAlignment="Left" Margin="10,109.63,0,0" VerticalAlignment="Top" Width="232.991" Height="92.633" Click="btnNominas_Click" Style="{StaticResource MyButtonNominas}"></Button>
+        <Button x:Name="btnProduccion" Content="" HorizontalAlignment="Left" Margin="247.991,211.72,0,0" VerticalAlignment="Top" Width="232.991" Height="92.633"  Click="btnProduccion_Click" Style="{StaticResource MyButtonProduccion}"></Button>
+        <Button x:Name="btnAdminpaq" Content="ADMINPAQ" HorizontalAlignment="Left" Margin="489.876,211.72,0,0" VerticalAlignment="Top" Width="232.991" Click="btnAdminpaq_Click" Height="92.633" Style="{StaticResource MyButtonAdminpaq}">
+        </Button>
+        
+    </Grid>
+</Window>
